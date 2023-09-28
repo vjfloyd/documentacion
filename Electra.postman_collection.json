@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "c688ae3a-4250-48d8-b11a-4d1b89af73cf",
+		"name": "Electra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1865323"
+	},
+	"item": [
+		{
+			"name": "transacation-application-api",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountExternalIdDebit\": \"Guid\",\n  \"accountExternalIdCredit\": \"Guid\",\n  \"tranferTypeId\": 1,\n  \"value\": 1572\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/application-services/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"application-services",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction-domain-api",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountExternalIdDebit\": \"Guid\",\n  \"accountExternalIdCredit\": \"Guid\",\n  \"tranferTypeId\": 1,\n  \"value\": 1572\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
